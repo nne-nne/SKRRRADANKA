@@ -10,6 +10,7 @@ public class MoveAroundNavMesh : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
+    //komentarz xD
 
     void Update()
     {
