@@ -8,8 +8,6 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
-/UserSettings/
-/ProjectSettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
