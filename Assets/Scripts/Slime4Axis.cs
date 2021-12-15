@@ -127,14 +127,14 @@ public class Slime4Axis : MonoBehaviour
     {
         float t = 0;
 
-        if(prevLookDirection != lookDirection)
-        {
+        //if(prevLookDirection != lookDirection)
+        //{
             while (t < rotationTime)
             {
                 t += Time.deltaTime;
                 yield return null;
             }
-        }
+        //}
 
 
         RaycastHit hit;

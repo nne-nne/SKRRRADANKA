@@ -11,15 +11,17 @@ public class Shooting : MonoBehaviour
 
     public int bulletNumer = 10;
     public float bulletForce = 20f;
+    private Animator animator;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
@@ -29,6 +31,10 @@ public class Shooting : MonoBehaviour
     {
         if (bulletNumer > 0)
         {
+            if(animator != null)
+            {
+                animator.SetTrigger("shoot");
+            }
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);

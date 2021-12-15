@@ -7,19 +7,32 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 movementDirection;
     private Slime4Axis slimeScript;
-    
+    private Animator animator;
+
+
     void Start()
     {
         slimeScript = GetComponent<Slime4Axis>();
         movementDirection = Vector2.up;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        if(Input.GetKey(KeyCode.LeftControl))
+        {
+            animator.SetBool("crouching", true);
+        }
+        else
+        {
+            animator.SetBool("crouching", false);
+        }
+
         if (Input.GetKeyDown(KeyCode.W) && !slimeScript.isMoving && !slimeScript.isRotating ||
             Input.GetKeyDown(KeyCode.UpArrow) && !slimeScript.isMoving && !slimeScript.isRotating)
         {
             slimeScript.Jump(movementDirection);
+            animator.SetTrigger("jump");
         }
         else if(Input.GetKeyDown(KeyCode.D) && !slimeScript.isMoving && !slimeScript.isRotating ||
             Input.GetKeyDown(KeyCode.RightArrow) && !slimeScript.isMoving && !slimeScript.isRotating)
@@ -40,6 +53,7 @@ public class PlayerController : MonoBehaviour
             {
                 movementDirection = Vector2.up;
             }
+            animator.SetTrigger("jump");
             slimeScript.Jump(movementDirection);
         }
         else if(Input.GetKeyDown(KeyCode.A) && !slimeScript.isMoving && !slimeScript.isRotating ||
@@ -61,6 +75,7 @@ public class PlayerController : MonoBehaviour
             {
                 movementDirection = Vector2.down;
             }
+            animator.SetTrigger("jump");
             slimeScript.Jump(movementDirection);
         }
     }
