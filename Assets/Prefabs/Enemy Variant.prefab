@@ -213,3 +213,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabe6fbbbb80a0946af5565c5e1af6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bangNotifyDistance: 20

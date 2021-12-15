@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float bangNotifyDistance;
+
     private Transform player;
     private Vector2 movementDirection;
     private Slime4Axis slimeScript;
@@ -18,9 +20,28 @@ public class EnemyController : MonoBehaviour
         Sleep();
     }
 
+    private void OnEnable()
+    {
+        Shooting.OnShot += TryDistanceNotify;
+    }
+
+    private void OnDisable()
+    {
+        Shooting.OnShot -= TryDistanceNotify;
+    }
+
+
     public void Notify()
     {
         isFollowing = true;
+    }
+
+    public void TryDistanceNotify()
+    {
+        if(Vector3.Distance(transform.position, player.position) < bangNotifyDistance)
+        {
+            Notify();
+        }
     }
 
     public void Sleep()

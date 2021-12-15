@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class Shooting : MonoBehaviour
 {
+    public delegate void ShootAction();
+    public static event ShootAction OnShot;
+
     // Start is called before the first frame update
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -41,6 +46,8 @@ public class Shooting : MonoBehaviour
             bulletNumer--;
 
             UpdateAmoText();
+
+            OnShot?.Invoke();
         }
     }
 
