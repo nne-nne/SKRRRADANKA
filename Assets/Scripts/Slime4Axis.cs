@@ -6,11 +6,13 @@ public class Slime4Axis : MonoBehaviour
 {
     [SerializeField] private float rotationTime;
     [SerializeField] private float movementTime;
+    [SerializeField] private float comebackTime;
     [Tooltip("Frac 0-1")]
 
     public Transform checkPivot;
     private Rigidbody rb;
     private Vector3 lookDirection;
+    private Vector3 prevLookDirection;
     private bool isRotating = false, isMoving = false;
 
     private static float tileWidth = 2f;
@@ -21,6 +23,7 @@ public class Slime4Axis : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
+        prevLookDirection = Vector3.zero;
     }
 
     void Update()
@@ -50,10 +53,14 @@ public class Slime4Axis : MonoBehaviour
             }
 
             StopAllCoroutines();
-            IEnumerator rotate = RotateTowards(Quaternion.Euler(lookDirection));
-            StartCoroutine(rotate);
+            if (prevLookDirection != lookDirection)
+            {
+                IEnumerator rotate = RotateTowards(Quaternion.Euler(lookDirection));
+                StartCoroutine(rotate);
+            }
             IEnumerator move = Move(direction);
             StartCoroutine(move);
+            prevLookDirection = lookDirection;
         }
     }
 
@@ -69,26 +76,74 @@ public class Slime4Axis : MonoBehaviour
             yield return null;
         }
         isRotating = false;
-
-        //rb.AddForce(transform.forward * moveForce, ForceMode.Impulse);
     }
 
+    private void AdjustPosition()
+    {
+        Vector2Int rounded = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
+        Debug.Log(transform.position + " " + rounded);
 
+        if (rounded.x % 2 == 0)
+        {
+            if (transform.position.x - rounded.x > 0)
+            {
+                rounded.x -= 1;
+            }
+            else
+            {
+                rounded.x += 1;
+            }
+        }
+        if (rounded.y % 2 == 0)
+        {
+            if (transform.position.z - rounded.y > 0)
+            {
+                rounded.y -= 1;
+            }
+            else
+            {
+                rounded.y += 1;
+            }
+        }
+
+        Vector3 targetPosition = new Vector3(rounded.x, transform.position.y, rounded.y);
+        transform.position = targetPosition;
+        Debug.Log("targetik: " + targetPosition);
+        //IEnumerator smoothTranslate = SmoothTranslate(targetPosition);
+        //StartCoroutine(smoothTranslate);
+    }
+
+    //private IEnumerator SmoothTranslate(Vector3 targetposition)
+    //{
+    //    Debug.Log("trochê przesunê");
+    //    Vector3 originalPos = transform.position;
+    //    float t = 0;
+    //    while(t < comebackTime)
+    //    {
+    //        t += Time.deltaTime;
+    //        transform.position = Vector3.Lerp(originalPos, targetposition, t / comebackTime);
+    //        yield return null;
+    //    }
+    //}
 
     private IEnumerator Move(Vector2 direction)
     {
         float t = 0;
-        while (t < rotationTime)
+
+        if(prevLookDirection != lookDirection)
         {
-            t += Time.deltaTime;
-            yield return null;
+            while (t < rotationTime)
+            {
+                t += Time.deltaTime;
+                yield return null;
+            }
         }
-        col.bounds.center.Set(0f, 0.5f, 2f);
 
 
         RaycastHit hit;
         if (!Physics.Raycast(checkPivot.position, transform.forward, out hit, tileWidth) ||
-            hit.collider.gameObject.layer != LayerMask.NameToLayer("nonwalkable"))
+            (hit.collider.gameObject.layer != LayerMask.NameToLayer("nonwalkable") &&
+            hit.collider.gameObject.layer != LayerMask.NameToLayer("movableObstacle")))
         {
             t = 0;
             isMoving = true;
@@ -96,17 +151,32 @@ public class Slime4Axis : MonoBehaviour
             Vector3 targetPosition = new Vector3(originalPosition.x + direction.x * tileWidth,
                                                      0f,
                                                   originalPosition.z + direction.y * tileWidth);
-
+            bool movingInterrupted = false;
             while (t < movementTime)
             {
                 rb.position = Vector3.Lerp(transform.position, targetPosition, t / movementTime);
-                col.bounds.center.Set(0f, 0.5f, 2-2*t/movementTime);
+                if (Physics.Raycast(checkPivot.position, transform.forward, out hit, tileWidth * (1 - t) * 0.48f) &&
+                    hit.collider.gameObject.layer == LayerMask.NameToLayer("movableObstacle"))
+                {
+                    movingInterrupted = true;
+                    break;
+                }
                 t += Time.deltaTime;
                 yield return null;
             }
-            isMoving = false;
-            col.bounds.center.Set(0f, 0.5f, 0f);
+            if(movingInterrupted)
+            {
+                t = 0f;
+                while(t<comebackTime)
+                {
+                    rb.position = Vector3.Lerp(transform.position, originalPosition, t / comebackTime);
+                    t += Time.deltaTime;
+                    yield return null;
+                }
+            }
+            AdjustPosition();
 
+            isMoving = false;
         }
     }
 }
