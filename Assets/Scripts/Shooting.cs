@@ -40,8 +40,13 @@ public class Shooting : MonoBehaviour
             rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
             bulletNumer--;
 
-            var number = GameObject.FindGameObjectWithTag("BulletNumber");
-            number.GetComponent<Text>().text="BULLET: "+bulletNumer;
+            UpdateAmoText();
         }
+    }
+
+    public void UpdateAmoText()
+    {
+        var number = GameObject.FindGameObjectWithTag("BulletNumber");
+        number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
     }
 }

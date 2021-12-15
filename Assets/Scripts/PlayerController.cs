@@ -17,16 +17,44 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("EnemyFieldOfView"))
+        {
+            EnemyController enemy = other.GetComponentInParent<EnemyController>();
+            if(enemy != null)
+            {
+                enemy.Notify();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("EnemyFieldOfView"))
+        {
+            EnemyController enemy = other.GetComponentInParent<EnemyController>();
+            if (enemy != null)
+            {
+                enemy.Sleep();
+            }
+        }
+    }
+
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftControl))
+        if(animator != null)
         {
-            animator.SetBool("crouching", true);
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                animator.SetBool("crouching", true);
+            }
+            else
+            {
+                animator.SetBool("crouching", false);
+            }
         }
-        else
-        {
-            animator.SetBool("crouching", false);
-        }
+
 
         if (Input.GetKeyDown(KeyCode.W) && !slimeScript.isMoving && !slimeScript.isRotating ||
             Input.GetKeyDown(KeyCode.UpArrow) && !slimeScript.isMoving && !slimeScript.isRotating)

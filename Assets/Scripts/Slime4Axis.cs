@@ -49,7 +49,6 @@ public class Slime4Axis : MonoBehaviour
                 lookDirection = new Vector3(0, 180, 0);
             }
 
-            StopAllCoroutines();
             if (prevLookDirection != lookDirection)
             {
                 IEnumerator rotate = RotateTowards(Quaternion.Euler(lookDirection));
@@ -78,7 +77,6 @@ public class Slime4Axis : MonoBehaviour
     private void AdjustPosition()
     {
         Vector2Int rounded = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
-        Debug.Log(transform.position + " " + rounded);
 
         if (rounded.x % 2 == 0)
         {
@@ -105,7 +103,6 @@ public class Slime4Axis : MonoBehaviour
 
         Vector3 targetPosition = new Vector3(rounded.x, transform.position.y, rounded.y);
         transform.position = targetPosition;
-        Debug.Log("targetik: " + targetPosition);
         //IEnumerator smoothTranslate = SmoothTranslate(targetPosition);
         //StartCoroutine(smoothTranslate);
     }
@@ -125,17 +122,19 @@ public class Slime4Axis : MonoBehaviour
 
     private IEnumerator Move(Vector2 direction)
     {
+        Debug.Log(name + "moving");
         float t = 0;
 
         //if(prevLookDirection != lookDirection)
         //{
             while (t < rotationTime)
             {
+                Debug.Log(name + " t =" + t);
                 t += Time.deltaTime;
                 yield return null;
             }
         //}
-
+        Debug.Log(name + "waited, moving");
 
         RaycastHit hit;
         if (!Physics.Raycast(checkPivot.position, transform.forward, out hit, tileWidth) ||
