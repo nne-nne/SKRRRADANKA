@@ -13,16 +13,13 @@ public class Slime4Axis : MonoBehaviour
     private Rigidbody rb;
     private Vector3 lookDirection;
     private Vector3 prevLookDirection;
-    private bool isRotating = false, isMoving = false;
+    public bool isRotating = false, isMoving = false;
 
     private static float tileWidth = 2f;
-    private Collider col;
-
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<Collider>();
         prevLookDirection = Vector3.zero;
     }
 
