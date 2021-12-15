@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     private Transform player;
     private Vector2 movementDirection;
     private Slime4Axis slimeScript;
+    private bool isFollowing = false;
 
     private Vector3 directionToPlayer;
 
@@ -14,12 +15,23 @@ public class EnemyController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         slimeScript = GetComponent<Slime4Axis>();
+        Sleep();
     }
 
-    void Update()
+    public void Notify()
+    {
+        isFollowing = true;
+    }
+
+    public void Sleep()
+    {
+        isFollowing = false;
+    }
+
+    private void FollowPlayer()
     {
         directionToPlayer = player.position - transform.position;
-        if(Mathf.Abs(directionToPlayer.x) > Mathf.Abs(directionToPlayer.z))
+        if (Mathf.Abs(directionToPlayer.x) > Mathf.Abs(directionToPlayer.z))
         {
             if (directionToPlayer.x > 0)
             {
@@ -41,6 +53,15 @@ public class EnemyController : MonoBehaviour
                 movementDirection = new Vector2(0, -1);
             }
         }
+        Debug.Log(name + "tring to jumpt to " + movementDirection);
         slimeScript.Jump(movementDirection);
+    }
+
+    void Update()
+    {
+        if(isFollowing)
+        {
+            FollowPlayer();
+        }
     }
 }

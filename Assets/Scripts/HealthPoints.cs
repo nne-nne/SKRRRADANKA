@@ -6,10 +6,11 @@ public class HealthPoints : MonoBehaviour
 {
     public GameObject bullet;
     public int health = 3;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,10 +21,18 @@ public class HealthPoints : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        health--;
-        if(health < 0)
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            Destroy(this.gameObject);
+            if (animator != null)
+            {
+                animator.SetTrigger("receiveDamage");
+            }
+
+            health--;
+            if (health < 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
