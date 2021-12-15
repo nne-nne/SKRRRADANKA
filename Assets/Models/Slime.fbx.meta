@@ -18,6 +18,15 @@ ModelImporter:
   - first:
       74: -3635421711590857884
     second: Armature|skok.004
+  - first:
+      74: -7727755223720282602
+    second: Armature|Otrzymanie Obrazen
+  - first:
+      74: 6263368956008018497
+    second: Armature|Reakcja Na Gracza
+  - first:
+      74: 4114542834581530639
+    second: Armature|smierc
   externalObjects: {}
   materials:
     materialImportMode: 2
