@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 2930530657726129710}
   - component: {fileID: 3911534832186539237}
   - component: {fileID: 2109190538003325301}
+  - component: {fileID: 8014140653259087353}
   m_Layer: 6
   m_Name: Rampage Slime
   m_TagString: Player
@@ -272,6 +273,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2424440145391959343, guid: 8d184e010a468e64d941401d37aa4ca1, type: 3}
   bulletNumer: 10
   bulletForce: 20
+--- !u!114 &8014140653259087353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852627486586871724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0926aa576567529449e0b5321fb24065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1960068578438725102
 GameObject:
   m_ObjectHideFlags: 0
