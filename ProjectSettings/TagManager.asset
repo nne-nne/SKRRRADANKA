@@ -8,6 +8,7 @@ TagManager:
   - BulletNumber
   - Bullet
   - EnemyFieldOfView
+  - Enemy
   layers:
   - Default
   - TransparentFX
