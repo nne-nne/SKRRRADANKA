@@ -43,5 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19b755e08afd304cbb69bbc0e9a9ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  example: {fileID: 4916278015041766015, guid: a4452d9d905de9a47b061e5343fb786d, type: 3}
   size: {x: 80, y: 80}
+  traps: []
+  slimeMovementTime: 0.3
+  slimeDelayTime: 0.2
+  player: {fileID: 0}

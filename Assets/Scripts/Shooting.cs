@@ -54,6 +54,9 @@ public class Shooting : MonoBehaviour
     public void UpdateAmoText()
     {
         var number = GameObject.FindGameObjectWithTag("BulletNumber");
-        number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
+        if(number != null)
+        {
+            number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
+        }
     }
 }

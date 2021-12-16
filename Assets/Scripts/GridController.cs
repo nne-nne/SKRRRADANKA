@@ -8,7 +8,7 @@ public class GridController : MonoBehaviour
     private GameObject[,] grid;
     public List<GameObject> traps;
     public static float tileWidth = 1f;
-    public float slimeMovementTime;
+    public float slimeMovementTime, slimeDelayTime;
 
     public GameObject player;
 
@@ -67,17 +67,15 @@ public class GridController : MonoBehaviour
         Vector2Int originalPos = FindOnGrid(gameObject);
         Vector2Int targetPos = originalPos + direction;
         GameObject occupant = grid[targetPos.x, targetPos.y];
-        if(occupant == null)
+
+        SlimeMove slimeScript = gameObject.GetComponent<SlimeMove>();
+        if (slimeScript != null)
         {
-            SlimeMove slimeScript = gameObject.GetComponent<SlimeMove>();
-            if(slimeScript != null)
+            slimeScript.Rotate(direction);
+            if(occupant == null && !slimeScript.isMoving)
             {
-                if(!slimeScript.isMoving)
-                {
-                    slimeScript.Rotate(direction);
-                    IEnumerator movementCoroutine = MovementCoroutine(gameObject, originalPos, targetPos);
-                    StartCoroutine(movementCoroutine);
-                }
+                IEnumerator movementCoroutine = MovementCoroutine(gameObject, originalPos, targetPos);
+                StartCoroutine(movementCoroutine);
             }
         }
     }
@@ -97,6 +95,12 @@ public class GridController : MonoBehaviour
             Vector3 targetPos = GetFieldCentre(targetField);
             float t = 0;
             grid[targetField.x, targetField.y] = slime;
+            while (t < slimeDelayTime)
+            {
+                t += Time.deltaTime;
+                yield return null;
+            }
+            t = 0;
             while (t < slimeMovementTime / 2)
             {
                 t += Time.deltaTime;

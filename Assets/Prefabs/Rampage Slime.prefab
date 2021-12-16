@@ -165,12 +165,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1368542670071448854}
-  - component: {fileID: 972910712431587666}
   - component: {fileID: 1832149265389023446}
   - component: {fileID: 2930530657726129710}
-  - component: {fileID: 3911534832186539237}
   - component: {fileID: 2109190538003325301}
+  - component: {fileID: 7962592471292974081}
   - component: {fileID: 8014140653259087353}
+  - component: {fileID: 3630420978096010382}
   m_Layer: 6
   m_Name: Rampage Slime
   m_TagString: Player
@@ -198,24 +198,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &972910712431587666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852627486586871724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d17a84a6b5338749acfd2488765cd45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationTime: 0.2
-  movementTime: 0.5
-  comebackTime: 0.2
-  checkPivot: {fileID: 7654109809329940069}
-  isRotating: 0
-  isMoving: 0
 --- !u!65 &1832149265389023446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -245,18 +227,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &3911534832186539237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852627486586871724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018c965af455eb247baf2234c6a40117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2109190538003325301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +243,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2424440145391959343, guid: 8d184e010a468e64d941401d37aa4ca1, type: 3}
   bulletNumer: 10
   bulletForce: 20
+--- !u!114 &7962592471292974081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852627486586871724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd015ff8b3b526a43a338e5b4a7e1427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8014140653259087353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +267,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0926aa576567529449e0b5321fb24065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldInitialize: 1
+--- !u!114 &3630420978096010382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852627486586871724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a953be6282bf3bd409d3e2a4e6d10e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMoving: 0
+  rotationTime: 0.2
 --- !u!1 &1960068578438725102
 GameObject:
   m_ObjectHideFlags: 0

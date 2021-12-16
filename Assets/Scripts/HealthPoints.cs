@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HealthPoints : MonoBehaviour
 {
-    public GameObject bullet;
     public int health = 3;
     private Animator animator;
     // Start is called before the first frame update
