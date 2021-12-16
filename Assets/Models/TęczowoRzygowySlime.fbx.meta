@@ -36,6 +36,24 @@ ModelImporter:
   - first:
       74: 8991710685359214397
     second: BezierCurve|Rzyg_Obiekt
+  - first:
+      74: -7338729630020988221
+    second: Sphere|OtwarcieUst
+  - first:
+      74: -6632666986802686336
+    second: Sphere|Rzyg_Obiekt
+  - first:
+      74: -8818517842695208388
+    second: Rzygi_krzywa|OtwarcieUst
+  - first:
+      74: -4832091589154173516
+    second: Rzygi_krzywa|Rzyg_Obiekt
+  - first:
+      74: 7154052261340439893
+    second: Rzygi_mesh|OtwarcieUst
+  - first:
+      74: 7880857416483415435
+    second: Rzygi_mesh|Rzyg_Obiekt
   externalObjects: {}
   materials:
     materialImportMode: 2

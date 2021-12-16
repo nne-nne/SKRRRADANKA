@@ -214,3 +214,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bangNotifyDistance: 20
+--- !u!114 &6471920711520260498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671075700131874190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0926aa576567529449e0b5321fb24065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

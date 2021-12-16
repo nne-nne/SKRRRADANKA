@@ -112,7 +112,7 @@ public class Slime4Axis : MonoBehaviour
     //    Debug.Log("trochê przesunê");
     //    Vector3 originalPos = transform.position;
     //    float t = 0;
-    //    while(t < comebackTime)
+    //    while (t < comebackTime)
     //    {
     //        t += Time.deltaTime;
     //        transform.position = Vector3.Lerp(originalPos, targetposition, t / comebackTime);
