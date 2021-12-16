@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 633840021}
   - component: {fileID: 633840025}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: CanvasPauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2277,6 +2277,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rampage Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 2109190538003325301, guid: 8f68c298e962af3478a56f7fd0e86688, type: 3}
+      propertyPath: CanvasPauseMenu
+      value: 
+      objectReference: {fileID: 285576660}
+    - target: {fileID: 2109190538003325301, guid: 8f68c298e962af3478a56f7fd0e86688, type: 3}
+      propertyPath: CanvasMessageBox
+      value: 
+      objectReference: {fileID: 1013290864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f68c298e962af3478a56f7fd0e86688, type: 3}
 --- !u!4 &1235187608 stripped
