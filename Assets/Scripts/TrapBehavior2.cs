@@ -8,6 +8,9 @@ public class TrapBehavior2 : MonoBehaviour
     public GameObject trap;
     private Transform start;
     public float comebackTime = 5f;
+
+
+    
     //private Transform endMarker;
     // Start is called before the first frame update
     void Start()

@@ -8,6 +8,7 @@ public class TrapBehavior : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAction;
+    public TrapTrigger pulapka;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,9 @@ public class TrapBehavior : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey))
             {
+                pulapka.latamy = true;
+
+                pulapka.Lec();
                 interactAction.Invoke();
             }
         }

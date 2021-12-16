@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7007304256701964084, guid: 31584b5c2f88c3a44b596a0a516b86fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.44
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7007304256701964084, guid: 31584b5c2f88c3a44b596a0a516b86fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3047,6 +3047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDie: 200
   slime: {fileID: 1113269983}
+  obj: {fileID: 2045744738}
 --- !u!1 &2079469823
 GameObject:
   m_ObjectHideFlags: 0

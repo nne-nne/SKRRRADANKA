@@ -5,7 +5,12 @@ using UnityEngine;
 public class TrapTrigger : MonoBehaviour
 {
     public float timeToDie = 2f;
-    public GameObject slime;    
+    public GameObject slime;
+    public bool latamy=false;
+
+    Vector3 lastPos;
+    public Transform obj;
+    float threshold = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,23 +22,31 @@ public class TrapTrigger : MonoBehaviour
     {
         
     }
-
     private void OnCollisionEnter(Collision collision)
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        //Debug.Log("Offset wynosi: " + offset);
+        if(latamy)
         {
+            EnemyController enemyController = slime.GetComponent<EnemyController>();
+            enemyController.Sleep();
             Debug.Log("It's a trap!!!");
-            while (timeToDie >= 0f)
-            {
-                Debug.Log(timeToDie);
-                timeToDie -= Time.deltaTime;
-            }
-
-            if (timeToDie <= 0f)
-            {
-                Debug.Log(timeToDie);
-                Destroy(slime);
-            }
+            StartCoroutine("WaitThenDestroy");   
         }
+    }
+
+    public void Lec()
+    {
+        StartCoroutine("WaitThenDestroy");
+    }
+
+    private IEnumerator WaitThenDestroy()
+    {
+        float t = 0;
+        while(t < timeToDie)
+        {
+           t += Time.deltaTime;
+            yield return null;
+        }
+        Destroy(slime);
     }
 }
