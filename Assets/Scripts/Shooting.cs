@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -18,6 +19,11 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
     private Animator animator;
 
+
+    public bool jestMenu = false;
+    public Image ImageMessageBox;
+    public Image ImagePauseMenu;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -26,7 +32,17 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(ImageMessageBox.gameObject.activeInHierarchy || ImagePauseMenu.gameObject.activeInHierarchy)
+        {
+            jestMenu = true;
+        }
+        else
+        {
+            jestMenu = false;
+        }
+        
+
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
@@ -34,20 +50,23 @@ public class Shooting : MonoBehaviour
 
     private void Shoot()
     {
-        if (bulletNumer > 0)
+        if (jestMenu == false)
         {
-            if(animator != null)
+            if (bulletNumer > 0)
             {
-                animator.SetTrigger("shoot");
+                if (animator != null)
+                {
+                    animator.SetTrigger("shoot");
+                }
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
+                bulletNumer--;
+
+                UpdateAmoText();
+
+                OnShot?.Invoke();
             }
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
-            bulletNumer--;
-
-            UpdateAmoText();
-
-            OnShot?.Invoke();
         }
     }
 
@@ -56,4 +75,5 @@ public class Shooting : MonoBehaviour
         var number = GameObject.FindGameObjectWithTag("BulletNumber");
         number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
     }
+
 }
