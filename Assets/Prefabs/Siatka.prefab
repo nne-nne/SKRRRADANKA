@@ -442,6 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6549051148746975763}
   - component: {fileID: 8855047585894754301}
+  - component: {fileID: 8164777391274610975}
   m_Layer: 0
   m_Name: Siatka
   m_TagString: Untagged
@@ -478,6 +479,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+--- !u!111 &8164777391274610975
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884295955726807209}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -6182290240203029568, guid: dd39b7418516c0646b3b0e62815b4981, type: 3}
+  m_Animations:
+  - {fileID: -6182290240203029568, guid: dd39b7418516c0646b3b0e62815b4981, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6771463394890572470
 GameObject:
   m_ObjectHideFlags: 0
