@@ -8,6 +8,8 @@ public class BetterEnemyController : MonoBehaviour
     public float notifyDistance = 3f;
     public float crouchNotifyDistance = 1f;
     public float movementTime;
+    public AudioSource surpriseSound;
+    public List<AudioSource> rzygSounds;
 
     public bool isTeczowyRzygajacy = false;
     public int attackDamage;
@@ -38,6 +40,12 @@ public class BetterEnemyController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    void PlayRandomClip(List<AudioSource> sources)
+    {
+        int n = Random.Range(0, sources.Count - 1);
+        sources[n].Play();
+    }
+
     private void OnEnable()
     {
         Shooting.OnShot += TryDistanceNotifyBang;
@@ -52,6 +60,7 @@ public class BetterEnemyController : MonoBehaviour
     {
         isFollowing = true;
         anim.SetTrigger("notify");
+        surpriseSound.Play();
     }
 
     public void TryDistanceNotify(bool isCrouching)
@@ -174,6 +183,7 @@ public class BetterEnemyController : MonoBehaviour
                 if (isTeczowyRzygajacy)
                 {
                     anim.SetTrigger("Rzyg");
+                    PlayRandomClip(rzygSounds);
                 }
                 else
                 {

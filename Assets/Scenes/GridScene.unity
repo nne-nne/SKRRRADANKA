@@ -6969,6 +6969,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6806681234527511268, guid: 53ceaf0011c30b940be51ba9f5d0552e, type: 3}
   m_PrefabInstance: {fileID: 852576883}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393386 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393386, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393387 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393387, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393388 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393388, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393389 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393389, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393390 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393390, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393391 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393391, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393392 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393392, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &858393393 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 858393393, guid: efa3d58189f8b504483786d7376d6397, type: 3}
+  m_PrefabInstance: {fileID: 8983630738932463799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &871705739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14773,29 +14813,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: hitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: hitPartikiel
+      propertyPath: deathSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
+      objectReference: {fileID: 858393387}
     - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: deathBoomTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: deathBleedTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: deathBoomPartikiel
+      propertyPath: deathSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
+      objectReference: {fileID: 858393386}
     - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: deathBleedPartikiel
+      propertyPath: damageSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+      objectReference: {fileID: 858393389}
+    - target: {fileID: 613624498752896953, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
+      propertyPath: damageSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393388}
     - target: {fileID: 2660937713447061003, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14844,14 +14876,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: "T\u0119czowoRzygowySlime"
       objectReference: {fileID: 0}
-    - target: {fileID: 3433533385140837553, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4062040905557421192, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
-      propertyPath: movementTime
-      value: 0.6
-      objectReference: {fileID: 0}
+      propertyPath: surpriseSound
+      value: 
+      objectReference: {fileID: 858393393}
+    - target: {fileID: 7594539384512571293, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 858393392}
+    - target: {fileID: 7594539384512571293, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
+      propertyPath: jumpSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393391}
+    - target: {fileID: 7594539384512571293, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
+      propertyPath: jumpSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 858393390}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d7547bd00a4fb84d94b989f37650c1d, type: 3}
 --- !u!1001 &3662106192763749442
@@ -14861,6 +14901,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 50580321681257530, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 858393392}
+    - target: {fileID: 50580321681257530, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: jumpSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393391}
+    - target: {fileID: 50580321681257530, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: jumpSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 858393390}
+    - target: {fileID: 1852627486210644827, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: deathSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 858393387}
+    - target: {fileID: 1852627486210644827, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: deathSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393386}
+    - target: {fileID: 1852627486210644827, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: damageSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 858393389}
+    - target: {fileID: 1852627486210644827, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
+      propertyPath: damageSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393388}
     - target: {fileID: 2318333888511116706, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -14908,10 +14976,6 @@ PrefabInstance:
     - target: {fileID: 3127662873325920024, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
       propertyPath: m_Name
       value: Rampage Slime
-      objectReference: {fileID: 0}
-    - target: {fileID: 3429266486360531393, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
-      propertyPath: chceMenu
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae285eb1d2d2b054cb9e3329042ad723, type: 3}
@@ -15041,37 +15105,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: hitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: hitPartikiel
+      propertyPath: deathSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
+      objectReference: {fileID: 858393387}
     - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: deathBoomTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: deathBleedTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: deathBoomPartikiel
+      propertyPath: deathSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
+      objectReference: {fileID: 858393386}
     - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: deathBleedPartikiel
+      propertyPath: damageSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+      objectReference: {fileID: 858393389}
+    - target: {fileID: 868859111286876285, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
+      propertyPath: damageSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393388}
+    - target: {fileID: 919132148882903126, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 858393392}
+    - target: {fileID: 919132148882903126, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
+      propertyPath: jumpSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 858393391}
+    - target: {fileID: 919132148882903126, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
+      propertyPath: jumpSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 858393390}
     - target: {fileID: 919132148882903128, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: cooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132148882903128, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: movementTime
-      value: 0.6
-      objectReference: {fileID: 0}
+      propertyPath: surpriseSound
+      value: 
+      objectReference: {fileID: 858393393}
     - target: {fileID: 4776050607247342870, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15120,10 +15184,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Kryszta\u0142owySlime (1)"
       objectReference: {fileID: 0}
-    - target: {fileID: 5263617341621823404, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0878acacd8f7fc4998c8bfb8d4f1bc3, type: 3}
 --- !u!1001 &8983630738932463799
@@ -15133,10 +15193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3678593469090148018, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: movementTime
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 4966178905071914146, guid: efa3d58189f8b504483786d7376d6397, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -15185,33 +15241,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 5737790204340196888, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: hitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: hitPartikiel
-      value: 
-      objectReference: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: deathBoomTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: deathBleedTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: deathBoomPartikiel
-      value: 
-      objectReference: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
-    - target: {fileID: 6293173855882553121, guid: efa3d58189f8b504483786d7376d6397, type: 3}
-      propertyPath: deathBleedPartikiel
-      value: 
-      objectReference: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efa3d58189f8b504483786d7376d6397, type: 3}
