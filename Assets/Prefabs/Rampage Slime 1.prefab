@@ -383,7 +383,7 @@ MonoBehaviour:
   isCrouching: 0
   movementTime: 0
   crouchingMovementTime: 1
-  normalMovementTime: 0.4
+  normalMovementTime: 0.3
 --- !u!114 &6765981533604945229
 MonoBehaviour:
   m_ObjectHideFlags: 0

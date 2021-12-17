@@ -115,6 +115,7 @@ MonoBehaviour:
   bangNotifyDistance: 30
   notifyDistance: 3
   crouchNotifyDistance: 1
+  movementTime: 0
   isTeczowyRzygajacy: 1
   attackDamage: 3
   attackTime: 2.2
@@ -181,6 +182,7 @@ MonoBehaviour:
   health: 3
   bulletDamage: 1
   timeToDie: 1
+  diesForAmen: 1
 --- !u!54 &1185023812492047778
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -542,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8985404919757237317}
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0.013383393, z: 0}
+  m_LocalPosition: {x: -0, y: -0.0134, z: -0.0279}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4431203330969203500}

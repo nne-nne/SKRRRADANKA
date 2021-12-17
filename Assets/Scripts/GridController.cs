@@ -106,6 +106,7 @@ public class GridController : MonoBehaviour
             {
                 t += Time.deltaTime;
                 slime.transform.position = Vector3.Lerp(originalPos, targetPos, t / slimeMovementTime);
+                Debug.Log(slime.transform.position);
                 yield return null;
             }
             grid[originalField.x, originalField.y] = null;
@@ -113,6 +114,7 @@ public class GridController : MonoBehaviour
             {
                 t += Time.deltaTime;
                 slime.transform.position = Vector3.Lerp(originalPos, targetPos, t / slimeMovementTime);
+                Debug.Log(slime.transform.position);
                 yield return null;
             }
             slimeScript.isMoving = false;
