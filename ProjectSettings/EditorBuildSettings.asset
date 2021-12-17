@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: cecb9c54fa55a4f4d93b85dfb9e1e637
+  - enabled: 1
+    path: Assets/Scenes/KubaScena.unity
+    guid: 756bf61309d6e494cb803e18b057c8a4
   m_configObjects: {}
