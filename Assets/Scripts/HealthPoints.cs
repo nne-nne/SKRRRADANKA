@@ -37,10 +37,8 @@ public class HealthPoints : MonoBehaviour
     public void DealDamage(int dmg)
     {
         health-=dmg;
-        Debug.Log("³ubudubu" + health);
         if (health <= 0 && !isDying)
         {
-            Debug.Log("umieram");
             isDying = true;
             animator.SetTrigger("die");
             if(diesForAmen)
