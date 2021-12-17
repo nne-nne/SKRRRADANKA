@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5669694842479358955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7699269703373964495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1754337683}
   - component: {fileID: 1754337685}
   - component: {fileID: 1754337684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "T\u0119czowoRzygowySlime 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   notifyDistance: 3
   crouchNotifyDistance: 1
   movementTime: 0.6
-  surpriseSound: {fileID: 0}
+  surpriseSound: {fileID: 1754337683}
   rzygSounds:
   - {fileID: 1754337685}
   - {fileID: 1754337684}
@@ -163,9 +163,9 @@ MonoBehaviour:
   isMoving: 0
   rotationTime: 0.2
   jumpSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1754337680}
+  - {fileID: 1754337681}
+  - {fileID: 1754337682}
 --- !u!95 &640413402818883570
 Animator:
   serializedVersion: 3
@@ -201,11 +201,11 @@ MonoBehaviour:
   deathBoomPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
   deathBleedPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
   damageSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1754337676}
+  - {fileID: 1754337677}
   deathSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1754337678}
+  - {fileID: 1754337679}
   deathBleedTime: 1
   deathBoomTime: 1
   hitTime: 1
@@ -1212,7 +1212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5171413899817573262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3095349255029852698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "kosc rzyg\xF3w"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4482016476117625000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1305,7 +1305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6469993885752974776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6367343933883160213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1368,7 +1368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6101265429273065222}
   - component: {fileID: 6503041201283586357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4431203330969203500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561588744009337655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663002980833637881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7522763784114228825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

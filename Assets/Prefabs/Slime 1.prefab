@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8094178055296382887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4642729554221696298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4061046420553227324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3795102043356233135}
   - component: {fileID: 4195547405490754460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1405323060823299227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7821112091028676646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6017939853811551844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 858393391}
   - component: {fileID: 858393392}
   - component: {fileID: 858393393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slime 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,9 +372,9 @@ MonoBehaviour:
   isMoving: 0
   rotationTime: 0.2
   jumpSounds:
-  - {fileID: 858393392}
-  - {fileID: 858393391}
   - {fileID: 858393390}
+  - {fileID: 858393391}
+  - {fileID: 858393392}
 --- !u!95 &7893403965880700790
 Animator:
   serializedVersion: 3
@@ -407,14 +407,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPartikiel: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
-  deathBoomPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
-  deathBleedPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBoomPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBleedPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
   damageSounds:
-  - {fileID: 858393389}
-  - {fileID: 858393388}
-  deathSounds:
-  - {fileID: 858393387}
   - {fileID: 858393386}
+  - {fileID: 858393387}
+  deathSounds:
+  - {fileID: 858393388}
+  - {fileID: 858393389}
   deathBleedTime: 1
   deathBoomTime: 1
   hitTime: 1
@@ -1229,7 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3024107421778653147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,7 +1261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6059141257797815066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4963434143443391938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

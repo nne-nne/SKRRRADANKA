@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8503057188857268483}
   - component: {fileID: 5055467248127261633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5098866639660266654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8572836986525468179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649202810832399923}
   - component: {fileID: 6016669445688201114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4537136844955970952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8338666933750164471}
   - component: {fileID: 1436659585353781504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751478800074737708}
   - component: {fileID: 3812556160397371783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3604692712970177563}
   - component: {fileID: 4365410794402947624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824109393316041017}
   - component: {fileID: 1246812952236620228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525643023916213551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,8 @@ GameObject:
   - component: {fileID: 498203592}
   - component: {fileID: 498203593}
   - component: {fileID: 498203594}
-  m_Layer: 0
+  - component: {fileID: 64598705}
+  m_Layer: 6
   m_Name: "Kryszta\u0142owySlime (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +733,7 @@ MonoBehaviour:
   notifyDistance: 3
   crouchNotifyDistance: 1
   movementTime: 0.6
-  surpriseSound: {fileID: 0}
+  surpriseSound: {fileID: 498203594}
   rzygSounds: []
   isTeczowyRzygajacy: 0
   attackDamage: 1
@@ -767,9 +768,9 @@ MonoBehaviour:
   isMoving: 0
   rotationTime: 0.2
   jumpSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 498203591}
+  - {fileID: 498203592}
+  - {fileID: 498203593}
 --- !u!95 &3191955247498265433
 Animator:
   serializedVersion: 3
@@ -802,14 +803,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPartikiel: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
-  deathBoomPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
-  deathBleedPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBoomPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBleedPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
   damageSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 498203587}
+  - {fileID: 498203588}
   deathSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 498203589}
+  - {fileID: 498203590}
   deathBleedTime: 1
   deathBoomTime: 1
   hitTime: 1
@@ -1615,6 +1616,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &64598705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263617341621823404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1959fda49ab2142a261c0f939968b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPartikiel: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
+  deathBoomPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBleedPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
+  damageSounds: []
+  deathSounds: []
+  deathBleedTime: 0
+  deathBoomTime: 0
+  hitTime: 0
+  health: 3
+  bulletDamage: 1
+  timeToDie: 0
+  diesForAmen: 1
+  grid: {fileID: 0}
 --- !u!1 &5443291789851641326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6136327898770390992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1654,7 +1680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7649000981347914130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,7 +1712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4438845791893879078}
   - component: {fileID: 7167915557111022872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5961355237505530542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,7 +1831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3412409595503615599}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1838,7 +1864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4171918904272584728}
   - component: {fileID: 1980482292486717974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1927,7 +1953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7765642801542925649}
   - component: {fileID: 6666112129707277329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,7 +2041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777528456808277110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2047,7 +2073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775263879796832412}
   - component: {fileID: 8441233203547594233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2136,7 +2162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081258373327747809}
   - component: {fileID: 8420541794778273518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2225,7 +2251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871241584146530508}
   - component: {fileID: 261494505189185371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

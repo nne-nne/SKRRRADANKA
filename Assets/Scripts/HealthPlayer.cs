@@ -29,6 +29,7 @@ public class HealthPlayer : MonoBehaviour
         float t = 0;
         while (t < healthPoints.timeToDie)
         {
+            Debug.Log(healthPoints.timeToDie);
             t += Time.deltaTime;
             yield return null;
         }
