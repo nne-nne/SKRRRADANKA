@@ -54,6 +54,9 @@ ModelImporter:
   - first:
       74: 7880857416483415435
     second: Rzygi_mesh|Rzyg_Obiekt
+  - first:
+      74: -1978303741906493279
+    second: Armature|idle
   externalObjects: {}
   materials:
     materialImportMode: 2

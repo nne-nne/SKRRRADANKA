@@ -5,7 +5,12 @@ using UnityEngine;
 public class HealthPoints : MonoBehaviour
 {
     public int health = 3;
+    public int bulletDamage = 1;
+    public float timeToDie;
+    public bool diesForAmen = true;
+    private bool isDying = false;
     private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,20 +23,49 @@ public class HealthPoints : MonoBehaviour
         
     }
 
+    private IEnumerator WaitAndDeactivate()
+    {
+        float t = 0;
+        while(t < timeToDie)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+        gameObject.SetActive(false);
+    }
+
+    public void DealDamage(int dmg)
+    {
+        health-=dmg;
+        Debug.Log("³ubudubu" + health);
+        if (health <= 0 && !isDying)
+        {
+            Debug.Log("umieram");
+            isDying = true;
+            animator.SetTrigger("die");
+            if(diesForAmen)
+            {
+                Destroy(this.gameObject, timeToDie);
+            }
+            else
+            {
+                StartCoroutine("WaitAndDeactivate");
+            }
+            
+        }
+        else if(health > 0)
+        {
+            Debug.Log("jeszcze nie umieram");
+            animator.SetTrigger("receiveDamage");
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            if (animator != null)
-            {
-                animator.SetTrigger("receiveDamage");
-            }
-
-            health--;
-            if (health < 0)
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(collision.gameObject);
+            DealDamage(bulletDamage);
         }
     }
 }
