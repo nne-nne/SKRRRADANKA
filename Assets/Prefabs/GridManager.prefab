@@ -48,3 +48,4 @@ MonoBehaviour:
   slimeMovementTime: 0.3
   slimeDelayTime: 0.2
   player: {fileID: 0}
+  enemies: []

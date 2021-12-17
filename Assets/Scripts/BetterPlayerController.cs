@@ -7,7 +7,10 @@ public class BetterPlayerController : MonoBehaviour
     private SlimeMove slimeMove;
     private GridController grid;
     private Animator anim;
-    private bool isCrouching = false;
+    public bool isCrouching = false;
+    public float movementTime;
+    public float crouchingMovementTime;
+    public float normalMovementTime;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +18,7 @@ public class BetterPlayerController : MonoBehaviour
         slimeMove = GetComponent<SlimeMove>();
         grid = FindObjectOfType<GridController>();
         anim = GetComponent<Animator>();
+        movementTime = normalMovementTime;
     }
 
     // Update is called once per frame
@@ -24,22 +28,22 @@ public class BetterPlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                grid.MoveObject(gameObject, Vector2Int.up);
+                grid.MoveObject(gameObject, Vector2Int.up, movementTime);
                 anim.SetTrigger("jump");
             }
             if (Input.GetKey(KeyCode.A))
             {
-                grid.MoveObject(gameObject, Vector2Int.left);
+                grid.MoveObject(gameObject, Vector2Int.left, movementTime);
                 anim.SetTrigger("jump");
             }
             if (Input.GetKey(KeyCode.S))
             {
-                grid.MoveObject(gameObject, Vector2Int.down);
+                grid.MoveObject(gameObject, Vector2Int.down, movementTime);
                 anim.SetTrigger("jump");
             }
             if (Input.GetKey(KeyCode.D))
             {
-                grid.MoveObject(gameObject, Vector2Int.right);
+                grid.MoveObject(gameObject, Vector2Int.right, movementTime);
                 anim.SetTrigger("jump");
             }
         }
@@ -48,11 +52,13 @@ public class BetterPlayerController : MonoBehaviour
         {
             isCrouching = true;
             anim.SetBool("crouching", true);
+            movementTime = crouchingMovementTime;
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             isCrouching = false;
             anim.SetBool("crouching", false);
+            movementTime = normalMovementTime;
         }
     }
 }

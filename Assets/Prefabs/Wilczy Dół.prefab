@@ -176,6 +176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8403050185324959031}
   - component: {fileID: 8066619329283186040}
+  - component: {fileID: 210981233741074880}
+  - component: {fileID: 8507625981770099942}
   m_Layer: 0
   m_Name: "Wilczy D\xF3\u0142"
   m_TagString: Untagged
@@ -211,3 +213,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0926aa576567529449e0b5321fb24065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldInitialize: 1
+--- !u!65 &210981233741074880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211674555257671565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &8507625981770099942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211674555257671565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbb4785d09c4644485404e6638debaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pianka: {fileID: 201504058007153994}

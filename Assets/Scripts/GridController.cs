@@ -8,13 +8,20 @@ public class GridController : MonoBehaviour
     private GameObject[,] grid;
     public List<GameObject> traps;
     public static float tileWidth = 1f;
-    public float slimeMovementTime, slimeDelayTime;
+    public float slimeDelayTime;
 
     public GameObject player;
+    public List<GameObject> enemies;
 
     void Awake()
     {
         grid = new GameObject[size.x,size.y];
+    }
+
+    public void RemoveFromGrid(GameObject obj)
+    {
+        Vector2Int pos = FindOnGrid(obj);
+        grid[pos.x, pos.y] = null;
     }
 
     private void PrintGrid()
@@ -66,7 +73,7 @@ public class GridController : MonoBehaviour
         return new Vector2Int(-1, -1);
     }
 
-    public void MoveObject(GameObject gameObject, Vector2Int direction)
+    public void MoveObject(GameObject gameObject, Vector2Int direction, float slimeMovementTime)
     {
         Vector2Int originalPos = FindOnGrid(gameObject);
         Vector2Int targetPos = originalPos + direction;
@@ -78,7 +85,7 @@ public class GridController : MonoBehaviour
             slimeScript.Rotate(direction);
             if(occupant == null && !slimeScript.isMoving)
             {
-                IEnumerator movementCoroutine = MovementCoroutine(gameObject, originalPos, targetPos);
+                IEnumerator movementCoroutine = MovementCoroutine(gameObject, originalPos, targetPos, slimeMovementTime);
                 StartCoroutine(movementCoroutine);
             }
         }
@@ -89,7 +96,7 @@ public class GridController : MonoBehaviour
         return new Vector3(field.x * tileWidth, 0f, field.y * tileWidth);
     }
 
-    private IEnumerator MovementCoroutine(GameObject slime, Vector2Int originalField, Vector2Int targetField)
+    private IEnumerator MovementCoroutine(GameObject slime, Vector2Int originalField, Vector2Int targetField, float slimeMovementTime)
     {
         SlimeMove slimeScript = slime.GetComponent<SlimeMove>();
         if(slimeScript != null)
@@ -109,6 +116,7 @@ public class GridController : MonoBehaviour
             {
                 t += Time.deltaTime;
                 slime.transform.position = Vector3.Lerp(originalPos, targetPos, t / slimeMovementTime);
+                Debug.Log(slime.transform.position);
                 yield return null;
             }
             grid[originalField.x, originalField.y] = null;
@@ -116,6 +124,7 @@ public class GridController : MonoBehaviour
             {
                 t += Time.deltaTime;
                 slime.transform.position = Vector3.Lerp(originalPos, targetPos, t / slimeMovementTime);
+                Debug.Log(slime.transform.position);
                 yield return null;
             }
             slimeScript.isMoving = false;

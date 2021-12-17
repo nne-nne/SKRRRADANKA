@@ -21,6 +21,9 @@ ModelImporter:
   - first:
       74: 4114542834581530639
     second: Armature|smierc
+  - first:
+      74: -1978303741906493279
+    second: Armature|idle
   externalObjects: {}
   materials:
     materialImportMode: 2

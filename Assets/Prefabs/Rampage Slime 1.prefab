@@ -380,6 +380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd015ff8b3b526a43a338e5b4a7e1427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCrouching: 0
+  movementTime: 0
+  crouchingMovementTime: 1
+  normalMovementTime: 0.3
 --- !u!114 &6765981533604945229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  bulletDamage: 1
+  timeToDie: 1
+  diesForAmen: 0
 --- !u!1 &3204325338056705597
 GameObject:
   m_ObjectHideFlags: 0
