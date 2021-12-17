@@ -477,6 +477,7 @@ MonoBehaviour:
   timeToDie: 2
   diesForAmen: 0
   grid: {fileID: 0}
+  player: {fileID: 3127662873325920024}
 --- !u!82 &343037266953846536
 AudioSource:
   m_ObjectHideFlags: 0

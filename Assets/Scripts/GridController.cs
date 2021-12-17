@@ -23,6 +23,14 @@ public class GridController : MonoBehaviour
     {
         Vector2Int pos = FindOnGrid(obj);
         grid[pos.x, pos.y] = null;
+        if (gameObject.layer == LayerMask.NameToLayer("enemy"))
+        {
+            enemies.Remove(gameObject);
+            if(enemies.Count <= 0)
+            {
+                
+            }
+        }
     }
 
 
@@ -51,6 +59,10 @@ public class GridController : MonoBehaviour
             if (grid[position.x, position.y] == null)
             {
                 grid[position.x, position.y] = gameObject;
+                if(gameObject.layer == LayerMask.NameToLayer("enemy"))
+                {
+                    enemies.Add(gameObject);
+                }
             }
             else
             {
