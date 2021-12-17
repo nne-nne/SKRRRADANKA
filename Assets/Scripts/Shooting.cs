@@ -76,7 +76,7 @@ public class Shooting : MonoBehaviour
         var number = GameObject.FindGameObjectWithTag("BulletNumber");
         if (number != null)
         {
-            number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
+            number.GetComponent<Text>().text = "x" + bulletNumer;
         }
     }
 
