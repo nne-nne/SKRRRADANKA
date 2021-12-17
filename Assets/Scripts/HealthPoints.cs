@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class HealthPoints : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class HealthPoints : MonoBehaviour
     private bool isDying = false;
     private Animator animator;
     public GridController grid;
-    public GameObject player;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,22 +33,7 @@ public class HealthPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.name == "Rampage Slime" && health<=0)
-        {
-
-            StartCoroutine("WaitAndDie");
-        }
-    }
-
-    private IEnumerator WaitAndDie()
-    {
-        float t = 0;
-        while (t < timeToDie)
-        {
-            t += Time.deltaTime;
-            yield return null;
-        }
-        ZmienScene(2);
+        
     }
 
     private IEnumerator WaitAndDeactivate()
@@ -131,10 +115,5 @@ public class HealthPoints : MonoBehaviour
             Destroy(collision.gameObject);
             DealDamage(bulletDamage, (transform.position - collision.transform.position));
         }
-    }
-
-    public void ZmienScene(int numerSceny)
-    {
-        SceneManager.LoadScene(numerSceny);
     }
 }

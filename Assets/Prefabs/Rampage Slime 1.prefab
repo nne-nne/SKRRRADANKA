@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 163516818762259357}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: rura2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2316715031079689410}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6407134064823232209}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: CheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8907113545990076536}
   - component: {fileID: 7046606227424686063}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018879710240838862}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: bron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8595046106862493083}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3982041253615732580}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,8 @@ GameObject:
   - component: {fileID: 1852627486210644832}
   - component: {fileID: 1852627486210644833}
   - component: {fileID: 1852627486210644834}
-  m_Layer: 6
+  - component: {fileID: 1510510619}
+  m_Layer: 8
   m_Name: Rampage Slime 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -373,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chceMenu: 0
-  wystrzalAudio: {fileID: 0}
+  wystrzalAudio: {fileID: 1852627486210644834}
   firePoint: {fileID: 5524591638960157550}
   bulletPrefab: {fileID: 2344034124699954557, guid: c12f1d1feb66a2743937fab5e14c29ca, type: 3}
   bulletNumer: 10
@@ -425,9 +426,9 @@ MonoBehaviour:
   isMoving: 0
   rotationTime: 0.2
   jumpSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1852627486210644831}
+  - {fileID: 1852627486210644832}
+  - {fileID: 1852627486210644833}
 --- !u!95 &3998200505014592828
 Animator:
   serializedVersion: 3
@@ -463,17 +464,17 @@ MonoBehaviour:
   deathBoomPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
   deathBleedPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
   damageSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 343037266953846536}
+  - {fileID: 1852627486210644828}
   deathSounds:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1852627486210644829}
+  - {fileID: 1852627486210644830}
   deathBleedTime: 1
   deathBoomTime: 1
   hitTime: 1
   health: 3
   bulletDamage: 1
-  timeToDie: 1
+  timeToDie: 2
   diesForAmen: 0
   grid: {fileID: 0}
 --- !u!82 &343037266953846536
@@ -1244,6 +1245,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1510510619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127662873325920024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9d86e0c184fa046bc35601575e89e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: {fileID: 1852627486210644827}
+  player: {fileID: 3127662873325920024}
 --- !u!1 &3204325338056705597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 598175040708274470}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4771661990382283781}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: rura1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4511253579006881386}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: rura3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3517713569344832026}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5562157371835295451}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673407972093154620}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1442,7 +1457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5795534822259979439}
   - component: {fileID: 6845081276194200220}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,7 +1550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5524591638960157550}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,7 +1580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6180186682538831714}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: rura3_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5178252471473910968}
   - component: {fileID: 5307231901272529683}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482604620011208359}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1718,7 +1733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2641714038437481514}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
