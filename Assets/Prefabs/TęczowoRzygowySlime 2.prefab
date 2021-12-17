@@ -187,7 +187,7 @@ MonoBehaviour:
   hitTime: 0
   health: 3
   bulletDamage: 1
-  timeToDie: 1
+  timeToDie: 0.3
   diesForAmen: 1
   grid: {fileID: 0}
 --- !u!54 &1185023812492047778

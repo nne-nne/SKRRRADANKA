@@ -723,9 +723,11 @@ MonoBehaviour:
   bangNotifyDistance: 30
   notifyDistance: 3
   crouchNotifyDistance: 1
+  movementTime: 0
   isTeczowyRzygajacy: 0
   attackDamage: 1
   attackTime: 0.2
+  cooldown: 0
   isFollowing: 0
 --- !u!114 &919132148882903127
 MonoBehaviour:
@@ -785,9 +787,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1959fda49ab2142a261c0f939968b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPartikiel: {fileID: 0}
+  deathBoomPartikiel: {fileID: 0}
+  deathBleedPartikiel: {fileID: 0}
+  deathBleedTime: 0
+  deathBoomTime: 0
+  hitTime: 0
   health: 3
   bulletDamage: 1
-  timeToDie: 1
+  timeToDie: 0.3
+  diesForAmen: 1
+  grid: {fileID: 0}
 --- !u!54 &7766241979543924273
 Rigidbody:
   m_ObjectHideFlags: 0
