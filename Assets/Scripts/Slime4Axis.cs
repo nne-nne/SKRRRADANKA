@@ -109,7 +109,7 @@ public class Slime4Axis : MonoBehaviour
 
     //private IEnumerator SmoothTranslate(Vector3 targetposition)
     //{
-    //    Debug.Log("trochê przesunê");
+    //    Debug.Log("trochê przesunê"); 
     //    Vector3 originalPos = transform.position;
     //    float t = 0;
     //    while (t < comebackTime)
@@ -122,19 +122,19 @@ public class Slime4Axis : MonoBehaviour
 
     private IEnumerator Move(Vector2 direction)
     {
-        Debug.Log(name + "moving");
+        //Debug.Log(name + "moving");
         float t = 0;
 
         //if(prevLookDirection != lookDirection)
         //{
             while (t < rotationTime)
             {
-                Debug.Log(name + " t =" + t);
+                //Debug.Log(name + " t =" + t);
                 t += Time.deltaTime;
                 yield return null;
             }
         //}
-        Debug.Log(name + "waited, moving");
+        //Debug.Log(name + "waited, moving");
 
         RaycastHit hit;
         if (!Physics.Raycast(checkPivot.position, transform.forward, out hit, tileWidth) ||
