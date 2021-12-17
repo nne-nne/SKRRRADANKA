@@ -13,6 +13,7 @@ public class GridController : MonoBehaviour
     public GameObject player;
     public List<GameObject> enemies;
 
+
     void Awake()
     {
         grid = new GameObject[size.x,size.y];
@@ -23,6 +24,7 @@ public class GridController : MonoBehaviour
         Vector2Int pos = FindOnGrid(obj);
         grid[pos.x, pos.y] = null;
     }
+
 
     private void PrintGrid()
     {
@@ -82,6 +84,7 @@ public class GridController : MonoBehaviour
         SlimeMove slimeScript = gameObject.GetComponent<SlimeMove>();
         if (slimeScript != null)
         {
+            slimeScript.PlayJumpSound();
             slimeScript.Rotate(direction);
             if(occupant == null && !slimeScript.isMoving)
             {

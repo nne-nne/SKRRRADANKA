@@ -7,10 +7,24 @@ public class SlimeMove : MonoBehaviour
     public bool isMoving = false;
     public float rotationTime;
     private Vector2 lookDirection, prevLookDirection;
+
+
+    public List<AudioSource> jumpSounds;
     // Start is called before the first frame update
     void Start()
     {
         prevLookDirection = Vector3.zero;
+    }
+
+    void PlayRandomClip(List<AudioSource> sources)
+    {
+        int n = Random.Range(0, sources.Count - 1);
+        sources[n].Play();
+    }
+
+    public void PlayJumpSound()
+    {
+        PlayRandomClip(jumpSounds);
     }
 
     // Update is called once per frame

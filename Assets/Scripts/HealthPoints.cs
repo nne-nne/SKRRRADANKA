@@ -9,6 +9,8 @@ public class HealthPoints : MonoBehaviour
     public ParticleSystem deathBoomPartikiel;
     public ParticleSystem deathBleedPartikiel;
 
+    public List<AudioSource> damageSounds, deathSounds;
+
     public float deathBleedTime;
     public float deathBoomTime;
     public float hitTime;
@@ -61,6 +63,12 @@ public class HealthPoints : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    void PlayRandomClip(List<AudioSource> sources)
+    {
+        int n = Random.Range(0, sources.Count - 1);
+        sources[n].Play();
+    }
+
     public void SiatkaDie()
     {
         ParticleSystem p = Instantiate(deathBoomPartikiel, transform.position, Quaternion.identity, transform);
@@ -69,6 +77,7 @@ public class HealthPoints : MonoBehaviour
         grid.RemoveFromGrid(gameObject);
         health = 0;
         animator.SetTrigger("die");
+        PlayRandomClip(deathSounds);
         if (diesForAmen)
         {
             Destroy(this.gameObject, timeToDie);
@@ -84,6 +93,7 @@ public class HealthPoints : MonoBehaviour
         health-=dmg;
         if (health <= 0 && !isDying)
         {
+            PlayRandomClip(deathSounds);
             ParticleSystem p = Instantiate(deathBleedPartikiel, transform.position, Quaternion.identity);
             p.GetComponent<Renderer>().material = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material;
             Destroy(p, deathBleedTime);
@@ -104,6 +114,7 @@ public class HealthPoints : MonoBehaviour
         }
         else if(health > 0)
         {
+            PlayRandomClip(damageSounds);
             Quaternion targetRotation = Quaternion.LookRotation(-direction, Vector3.right); ;
             ParticleSystem p = Instantiate(hitPartikiel, transform.position, targetRotation);
             p.GetComponent<Renderer>().material = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material;

@@ -16,7 +16,7 @@ public class SiatkaScript : MonoBehaviour
         slimesInRange = new List<HealthPoints>();
     }
 
-    void Siup()
+    public void Siup()
     {
         anim.SetTrigger("Siup");
         StartCoroutine("Lift");
@@ -30,10 +30,7 @@ public class SiatkaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Siup();
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
