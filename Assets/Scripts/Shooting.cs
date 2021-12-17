@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 
 public class Shooting : MonoBehaviour
@@ -32,7 +28,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ImageMessageBox.gameObject.activeInHierarchy || ImagePauseMenu.gameObject.activeInHierarchy)
+        if (ImageMessageBox.gameObject.activeInHierarchy || ImagePauseMenu.gameObject.activeInHierarchy)
         {
             jestMenu = true;
         }
@@ -40,7 +36,7 @@ public class Shooting : MonoBehaviour
         {
             jestMenu = false;
         }
-        
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -73,7 +69,7 @@ public class Shooting : MonoBehaviour
     public void UpdateAmoText()
     {
         var number = GameObject.FindGameObjectWithTag("BulletNumber");
-        if(number != null)
+        if (number != null)
         {
             number.GetComponent<Text>().text = "BULLET: " + bulletNumer;
         }

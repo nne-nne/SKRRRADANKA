@@ -37,14 +37,18 @@ public class GridController : MonoBehaviour
 
     public void PlaceObject(GameObject gameObject, Vector2Int position)
     {
-        if(grid[position.x, position.y] == null)
+        if(position.x >= 0 && position.y >= 0 && position.x < size.x && position.y < size.y)
         {
-            grid[position.x, position.y] = gameObject;
+            if (grid[position.x, position.y] == null)
+            {
+                grid[position.x, position.y] = gameObject;
+            }
+            else
+            {
+                Debug.Log("there is already an object");
+            }
         }
-        else
-        {
-            Debug.Log("there is already an object");
-        }
+
     }
 
     private Vector2Int FindOnGrid(GameObject gameObject)

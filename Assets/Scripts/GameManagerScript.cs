@@ -6,11 +6,10 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class GameManagerScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class GameManagerScript : MonoBehaviour
 {
     public Button Level1;
     public Button Level2;
-    public Text textPlay;
 
     public void Start()
     {
@@ -34,13 +33,5 @@ public class GameManagerScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         Level2.gameObject.SetActive(true);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        textPlay.color = Color.green;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        textPlay.color = Color.white;
-    }
+    
 }
