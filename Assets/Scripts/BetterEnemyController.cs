@@ -101,7 +101,7 @@ public class BetterEnemyController : MonoBehaviour
             canAttack = true;
             if (Vector3.Distance(playerPosition, player.position) <= 1.2f)
             {
-                playerHealthScript.DealDamage(attackDamage);
+                playerHealthScript.DealDamage(attackDamage, player.position - transform.position);
             }
             StartCoroutine("CooldownCoroutine");
         }

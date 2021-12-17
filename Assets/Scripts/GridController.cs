@@ -18,6 +18,12 @@ public class GridController : MonoBehaviour
         grid = new GameObject[size.x,size.y];
     }
 
+    public void RemoveFromGrid(GameObject obj)
+    {
+        Vector2Int pos = FindOnGrid(obj);
+        grid[pos.x, pos.y] = null;
+    }
+
     private void PrintGrid()
     {
         for (int i = 0; i < size.x; i++)
