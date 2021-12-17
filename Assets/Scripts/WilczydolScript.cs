@@ -7,6 +7,7 @@ public class WilczydolScript : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject pianka;
+    public float fallingspeed = 20f;
     void Start()
     {
         
@@ -30,6 +31,19 @@ public class WilczydolScript : MonoBehaviour
             rb.isKinematic = false;
             rb.useGravity = true;
             hp.DealDamage(int.MaxValue, Vector3.up);
+            IEnumerator fall = Falldown(other.gameObject, 1);
+            StartCoroutine(fall);
+        }
+    }
+
+    private IEnumerator Falldown(GameObject obj, float maxT)
+    {
+        float t = 0;
+        while(t < maxT)
+        {
+            obj.transform.position -= new Vector3(0f, obj.transform.position.y - Time.deltaTime * fallingspeed, 0f);
+            t += Time.deltaTime;
+            yield return null;
         }
     }
 }
