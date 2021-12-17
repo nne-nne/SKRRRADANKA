@@ -220,6 +220,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "4b551b5771b74889b88638f8aea2674f"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "eb50eb31720a4686b1c2c775935d0717"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "4d942d5619b042019ed0ee5406b7182a"
                 },
                 "m_SlotId": 3
@@ -1095,10 +1109,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1755.0,
-            "y": -15.999995231628418,
-            "width": 208.00001525878907,
-            "height": 316.0
+            "x": -1877.60009765625,
+            "y": -108.0,
+            "width": 208.0,
+            "height": 314.39996337890627
         }
     },
     "m_Slots": [
@@ -1426,7 +1440,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "6d5494d8304b4ac0af30923b7d5256ed",
     "m_Id": 0,
-    "m_DisplayName": "Skala",
+    "m_DisplayName": "SkalaPianki",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

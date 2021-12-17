@@ -44,6 +44,24 @@ public class HealthPoints : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void SiatkaDie()
+    {
+        ParticleSystem p = Instantiate(deathBoomPartikiel, transform.position, Quaternion.identity, transform);
+        p.GetComponent<Renderer>().material = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material;
+        Destroy(p, deathBoomTime);
+        grid.RemoveFromGrid(gameObject);
+        health = 0;
+        animator.SetTrigger("die");
+        if (diesForAmen)
+        {
+            Destroy(this.gameObject, timeToDie);
+        }
+        else
+        {
+            StartCoroutine("WaitAndDeactivate");
+        }
+    }
+
     public void DealDamage(int dmg, Vector3 direction)
     {
         health-=dmg;
@@ -51,7 +69,7 @@ public class HealthPoints : MonoBehaviour
         {
             ParticleSystem p = Instantiate(deathBleedPartikiel, transform.position, Quaternion.identity);
             p.GetComponent<Renderer>().material = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material;
-            Destroy(p, hitTime);
+            Destroy(p, deathBleedTime);
             isDying = true;
 
             grid.RemoveFromGrid(gameObject);

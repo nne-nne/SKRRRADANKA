@@ -364,10 +364,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd80e46868efc124eb0c8724e293797e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chceMenu: 1
   firePoint: {fileID: 5524591638960157550}
   bulletPrefab: {fileID: 2344034124699954557, guid: c12f1d1feb66a2743937fab5e14c29ca, type: 3}
   bulletNumer: 10
   bulletForce: 20
+  jestMenu: 0
+  ImageMessageBox: {fileID: 0}
+  ImagePauseMenu: {fileID: 0}
 --- !u!114 &6652561602920338613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,10 +446,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1959fda49ab2142a261c0f939968b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPartikiel: {fileID: 1496229499719300278, guid: d2c7d07e2dc84954ca4823e6a5e8f094, type: 3}
+  deathBoomPartikiel: {fileID: 6431648264010412722, guid: cfef11c0bffaddd4fac6f48c894d63ac, type: 3}
+  deathBleedPartikiel: {fileID: 7193158770860227257, guid: 6afaac4be3026734a9e993810bf17afb, type: 3}
+  deathBleedTime: 1
+  deathBoomTime: 1
+  hitTime: 1
   health: 3
   bulletDamage: 1
   timeToDie: 1
   diesForAmen: 0
+  grid: {fileID: 0}
 --- !u!1 &3204325338056705597
 GameObject:
   m_ObjectHideFlags: 0

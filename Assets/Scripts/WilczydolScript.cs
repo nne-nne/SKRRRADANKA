@@ -41,7 +41,7 @@ public class WilczydolScript : MonoBehaviour
         float t = 0;
         while(t < maxT)
         {
-            obj.transform.position -= new Vector3(0f, obj.transform.position.y - Time.deltaTime * fallingspeed, 0f);
+            obj.transform.position -= new Vector3(0f, Time.deltaTime * fallingspeed, 0f);
             t += Time.deltaTime;
             yield return null;
         }

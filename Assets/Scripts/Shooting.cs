@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public delegate void ShootAction();
     public static event ShootAction OnShot;
+    public bool chceMenu = true;
 
     // Start is called before the first frame update
     public Transform firePoint;
@@ -28,14 +29,18 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ImageMessageBox.gameObject.activeInHierarchy || ImagePauseMenu.gameObject.activeInHierarchy)
+        if(chceMenu)
         {
-            jestMenu = true;
+            if (ImageMessageBox.gameObject.activeInHierarchy || ImagePauseMenu.gameObject.activeInHierarchy)
+            {
+                jestMenu = true;
+            }
+            else
+            {
+                jestMenu = false;
+            }
         }
-        else
-        {
-            jestMenu = false;
-        }
+
 
 
         if (Input.GetMouseButtonDown(0))
