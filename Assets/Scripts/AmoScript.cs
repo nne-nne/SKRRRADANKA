@@ -20,7 +20,7 @@ public class AmoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * Mathf.Sin(Time.deltaTime * movementSpeed) * movementRange;
+        transform.position += Vector3.up * Mathf.Sin(Time.time * movementSpeed) * movementRange;
     }
 
     private void OnTriggerEnter(Collider other)
