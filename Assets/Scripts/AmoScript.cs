@@ -5,16 +5,22 @@ using UnityEngine;
 public class AmoScript : MonoBehaviour
 {
     public int amoBonus;
+    public float yPosDefault;
+    public float movementSpeed, movementRange;
+    public float scaleMultiplier, baseScale;
+
+ 
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(transform.position.x, yPosDefault, transform.position.z);
+        transform.localScale = new Vector3(1, 1, 1) * (baseScale + amoBonus * scaleMultiplier);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Vector3.up * Mathf.Sin(Time.time * movementSpeed) * movementRange;
     }
 
     private void OnTriggerEnter(Collider other)

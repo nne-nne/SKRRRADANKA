@@ -141,7 +141,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: dd3b2b781cc0ada42bc9898b5e97db60, type: 2}
-  - {fileID: 2100000, guid: dd3b2b781cc0ada42bc9898b5e97db60, type: 2}
+  - {fileID: 2100000, guid: cf273fb50533e5a4f9ae0c47b33df9c1, type: 2}
   - {fileID: 2100000, guid: dd3b2b781cc0ada42bc9898b5e97db60, type: 2}
   - {fileID: 2100000, guid: c4932ee6361ec5d4eba1585ccf2b1f78, type: 2}
   - {fileID: 2100000, guid: c4932ee6361ec5d4eba1585ccf2b1f78, type: 2}
@@ -240,3 +240,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pianka: {fileID: 201504058007153994}
+  fallingspeed: 20

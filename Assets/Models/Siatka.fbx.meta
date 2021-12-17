@@ -4,8 +4,20 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -6182290240203029568
-    second: "Armature|Zamkni\u0119cie Siatki"
+      74: 5862363611590114583
+    second: "Armature.001|idle_le\u017C\u0105cy"
+  - first:
+      74: 4797339562146088394
+    second: "Armature.001|idle_le\u017C\u0105cy.001"
+  - first:
+      74: 2613166324587756376
+    second: "Armature.001|idle_wisz\u0105cy"
+  - first:
+      74: -3044602897331450001
+    second: "Armature.001|idle_wisz\u0105cy.001"
+  - first:
+      74: 4038989538476245297
+    second: "Armature.001|Zamkni\u0119cie Siatki.001"
   externalObjects: {}
   materials:
     materialImportMode: 2
